@@ -9,7 +9,3 @@ F
 src/reportWebVitals.ts,d/9/d938938695d447dadda115e28781c6541f53fc4f
 A
 src/setupTests.ts,3/9/39129446b425a1d640160c068e4194e96639eedf
-@
-src/App.test.tsx,1/f/1fc1c06a0502bf303f8ba35e530938a98e7e35b2
-<
-package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a

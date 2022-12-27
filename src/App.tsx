@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.scss';
-import { fetchUser, saveUser, User } from './services/users';
+import { DEFAULT_USER, fetchUser, saveUser, User } from './services/users';
 
 function App() {
-    const [user, setUser] = useState<User>({name: 'unknown', email: ''});
+    const [user, setUser] = useState<User>(DEFAULT_USER);
 
     useEffect(() => {
         fetchUser().then(u => setUser(u));
