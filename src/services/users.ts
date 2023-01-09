@@ -1,43 +1,25 @@
 export interface User {
+    id?: number;
     email: string;
-    name: string;
-}
-const url = 'http://localhost:3003/user';
-
-export const DEFAULT_USER = {name: 'unknown', email: ''};
-
-export function fetchUser(): Promise<User> {
-    // GET request
-    return fetch(`${url}/stam`, {headers: {bootcamp: '1'}})
-        .then(res => {
-            if (res.status !== 200) {
-                return DEFAULT_USER;
-            }
-            return res.json();
-        });
+    fname: string;
+    lname: string;
+    password?: string;
 }
 
-export function saveUser(user: User) {
-    // POST request
-    const body = JSON.stringify(user);
-    const method = 'POST';
-    const headers = {
-        'content-type': 'application/json',
-        bootcamp: '1'
-    }
-    return fetch(url, {method, headers, body}).then(res => res.json());
-}
+const URL = 'http://localhost:3003/user';
+
+export const DEFAULT_USER: User = {email: '', fname: '', lname: ''};
 
 
-export function validateUser(user: User) {
-    if (!Object.keys(user).length) {
-        throw new Error('missing inputs');
+export class Users {
+    constructor(public readonly url: string) {
     }
-    if (!user.email) {
-        throw new Error('missing email');
+
+    all() {
+        return fetch(this.url).then(res => res.json());
     }
-    if (!user.name) {
-        throw new Error('missing name');
+
+    byId(id: number): Promise<User> {
+        return fetch(`${this.url}/${id}`).then(res => res.json());
     }
-    return user;
 }

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/gruniact.iml" filepath="$PROJECT_DIR$/.idea/gruniact.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../grunitech/grunilib/.idea/grunilib.iml" filepath="$PROJECT_DIR$/../grunitech/grunilib/.idea/grunilib.iml" />
     </modules>
   </component>
 </project>
