@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './users.scss';
 import { User } from '../../models/user';
 import UserForm from '../../components/user-form/user-form';
+import UsersTable from '../../components/users-table/users-table';
 
 const URL = 'http://localhost:3003/user';
 
@@ -48,28 +49,7 @@ export default function Users() {
     return (
         <>
             <UserForm onUser={handleAdd}/>
-            <table className="users">
-                <thead>
-                <tr>
-                    <th>id</th>
-                    <th>email</th>
-                    <th>first name</th>
-                    <th>last name</th>
-                    <th>delete</th>
-                </tr>
-                </thead>
-                <tbody>
-                {users.map((u: User, i) => (<tr key={i}>
-                    <td>{u.id}</td>
-                    <td>{u.email}</td>
-                    <td>{u.fname}</td>
-                    <td>{u.lname}</td>
-                    <td>
-                        <button onClick={() => handleDelete(u.id as number)}>DELETE</button>
-                    </td>
-                </tr>))}
-                </tbody>
-            </table>
+            <UsersTable users={users}/>
         </>
     );
 }
