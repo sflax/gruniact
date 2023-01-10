@@ -1,5 +1,5 @@
 import { FormEvent } from 'react';
-import { User } from '../services/users';
+import { User } from '../../models/user';
 
 export interface UserFormProps {
     onUser?: (user: Partial<User>) => void;

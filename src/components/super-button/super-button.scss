@@ -1,0 +1,15 @@
+button.super-button {
+  font-size: 2em;
+  line-height: 2em;
+
+  border: 1px solid red;
+  border-radius: .5em;
+  background-color: lightpink;
+
+  width: 200px;
+
+  &:hover {
+    zoom: 150%;
+    border-width: 2px;
+  }
+}

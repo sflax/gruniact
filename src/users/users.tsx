@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { User } from '../services/users';
 import './users.scss';
-import UserForm from '../user-form/user-form';
+import UserForm from '../components/user-form/user-form';
 
 const URL = 'http://localhost:3003/user';
 
