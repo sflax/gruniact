@@ -47,6 +47,9 @@ describe('super-button', () => {
     });
 
 
+    it('should make sure the button label is "HIT ME"', () => {
+
+    });
 
 
 
