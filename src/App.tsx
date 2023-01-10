@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.scss';
-import Users from './users/users';
+import { Outlet } from 'react-router-dom';
+import Navigation from './components/navigation/navigation';
 
 function App() {
     return (
-        <div className="App">
-            <h2>Users Table</h2>
-            {/*<Users/>*/}
+        <div className="app">
+            <h2>GRUNIACT</h2>
+            <Navigation />
+            <Outlet/>
         </div>
     );
 }
