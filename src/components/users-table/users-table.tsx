@@ -3,10 +3,10 @@ import { User } from '../../models/user';
 
 export interface UsersTableProps {
     users: User[];
-    removeUser?: (u: User) => void;
+    removeUser: (u: User) => void;
 }
 
-export default function UsersTable({users}: UsersTableProps) {
+export default function UsersTable({users, removeUser}: UsersTableProps) {
     return (
         <table className="users">
             <thead>
@@ -25,7 +25,7 @@ export default function UsersTable({users}: UsersTableProps) {
                 <td>{u.fname}</td>
                 <td>{u.lname}</td>
                 <td>
-                    <button>DELETE</button>
+                    <button onClick={() => removeUser(u)}>DELETE</button>
                 </td>
             </tr>))}
             </tbody>
