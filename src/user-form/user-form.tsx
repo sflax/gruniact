@@ -22,7 +22,7 @@ export default function UserForm({onUser}: UserFormProps) {
             <input type="email" name="email" placeholder="email"/>
             <input type="text" name="fname" placeholder="first name"/>
             <input type="text" name="lname" placeholder="last name"/>
-            <input type="password" name="password"/>
+            <input type="password" name="password" placeholder="Your password "/>
             <button type="submit">Add User</button>
         </form>
     );
