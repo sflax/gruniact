@@ -30,7 +30,6 @@
   "exclude": [
     "**/*.test.ts",
     "**/*.spec.ts",
-    "**/*.cy.ts",
-    "**/*.cy.tsx"
+    "**/*.cy.ts"
   ]
 }
